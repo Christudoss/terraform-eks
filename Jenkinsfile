@@ -3,9 +3,11 @@ pipeline{
     
     stages{
         stage('Terraform'){
-			sh terraform init
-			sh terraform plan -auto-approve
-			sh terraform apply - auto-approve
+			steps{
+				sh terraform init
+				sh terraform plan -auto-approve
+				sh terraform apply - auto-approve
+				}
 		}
     }
 }
