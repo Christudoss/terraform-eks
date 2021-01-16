@@ -6,7 +6,7 @@ pipeline{
 			steps{
 				dir('./env/dev'){
 					sh 'terraform init'
-					sh 'terraform plan -auto-approve'
+					sh 'terraform plan'
 					sh 'terraform apply - auto-approve'
 				}
 			}
